@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      PORT: 3000
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: airways
+      JWT_PRIVATE_KEY: rsschool2023jwtKey
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: npm run start:dev
+    depends_on:
+      - postgres
+    restart: always
+  postgres:
+    image: postgres
+    environment:
+      PORT: 3000
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: airways
+      JWT_PRIVATE_KEY: rsschool2023jwtKey
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:

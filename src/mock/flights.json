@@ -1,0 +1,432 @@
+[
+  {
+    "from": "AMS",
+    "to": "ATH",
+    "startTime": "15:40",
+    "timeMins": 195,
+    "avaible": 20,
+    "price": 362,
+    "flightNumber": "KL‑1581",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "ATH",
+    "to": "AMS",
+    "startTime": "20:40",
+    "timeMins": 215,
+    "avaible": 34,
+    "price": 113,
+    "flightNumber": "KL‑1576",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "AMS",
+    "to": "BER",
+    "startTime": "21:30",
+    "timeMins": 85,
+    "avaible": 143,
+    "price": 65,
+    "flightNumber": "U2‑5288",
+    "days": [0,2,4,6]
+  },
+  {
+    "from": "BER",
+    "to": "AMS",
+    "startTime": "19:30",
+    "timeMins": 90,
+    "avaible": 143,
+    "price": 44,
+    "flightNumber": "U2‑5287",
+    "days": [0,2,4,6]
+  },
+  {
+    "from": "AMS",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  },
+  {
+    "from": "",
+    "to": "",
+    "startTime": "",
+    "timeMins": 0,
+    "avaible": 100,
+    "price": 362,
+    "flightNumber": "",
+    "days": [0,1,2,3,4,5,6]
+  }
+]
