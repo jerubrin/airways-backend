@@ -1,11 +1,12 @@
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
-import { ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swagger';
+import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { FlightsService } from './flights.service';
 import { SearchFlights } from './models/search.model';
 import { Flight } from './models/flight.model';
 import { Airport } from './models/airport.model';
 
 @Controller('search')
+@ApiTags('Flights and airports')
 export class FlightsController {
   constructor(private flightsService: FlightsService) {}
 

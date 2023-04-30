@@ -7,6 +7,7 @@ import { LoginRequest } from './model/login-request';
 import { hash, compare } from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { TokenRes } from './model/token-res';
+import { UserRes } from './model/user-res';
 
 @Injectable()
 export class AuthService {
@@ -15,6 +16,26 @@ export class AuthService {
     private usersRepository: Repository<User>,
     private jwtService: JwtService,
   ) {}
+
+  async getUser(req) {
+    const user = await this.getUserByEmail(req.user.email);
+
+    if (!user) {
+      throw new HttpException('User not found', HttpStatus.NOT_FOUND);
+    }
+
+    const userRes = new UserRes();
+    userRes.email = user.email;
+    userRes.firstName = user.firstName;
+    userRes.lastName = user.lastName;
+    userRes.dateOfBirth = user.dateOfBirth;
+    userRes.gender = user.gender;
+    userRes.countryCode = user.countryCode;
+    userRes.phone = user.phone;
+    userRes.citizenship = user.citizenship;
+
+    return userRes;
+  }
 
   async createUser(req: RegistrationRequest) {
     const user = await this.getUserByEmail(req.email);
