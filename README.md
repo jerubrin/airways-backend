@@ -5,10 +5,14 @@
 ### [API Deploy](https://api.air-ways.online/)
 https://api.air-ways.online/
 
+https://api2.air-ways.online/
+
 ## Docs for API here:
 
 ### [API Docs](https://api.air-ways.online/api/docs)
 https://api.air-ways.online/api/docs
+
+https://api2.air-ways.online/api/docs
 
 ## Custom Deploy:
 
