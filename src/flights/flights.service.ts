@@ -6,6 +6,7 @@ import * as airports from '../mock/airports.json';
 import { getRandomInt } from 'src/helper/get-random-int';
 import { getRandomChars } from 'src/helper/get-random-chars';
 import { Price } from './models/price.model';
+import { PriceList } from './models/prices.model';
 
 @Injectable()
 export class FlightsService {
@@ -54,12 +55,27 @@ export class FlightsService {
     flight.to = to;
     flight.takeoffDate = takeoffDate;
     flight.landingDate = landingDate;
-    flight.price = new Price();
+    flight.prices = new PriceList();
 
-    flight.price.eur = getRandomInt(40, 1200);
-    flight.price.usd = flight.price.eur * 1.1031;
-    flight.price.rub = flight.price.eur * 88.47;
-    flight.price.pln = flight.price.eur * 4.59;
+    for (let i = -2; i < 3; i += 1) {
+      const isClear = getRandomInt(0, 5) === 1;
+
+      if (!isClear || i === 0) {
+        flight.prices[i] = new Price(getRandomInt(40, 900));
+      }
+    }
+    const takeoffDateMs = new Date(date).getTime();
+    const currentDateMs = new Date().getTime();
+
+    if (takeoffDateMs - currentDateMs < 0) {
+      flight.prices['-1'] = undefined;
+    }
+
+    if (takeoffDateMs - currentDateMs - 24 * 60 * 60 * 1000 < 0) {
+      flight.prices['-2'] = undefined;
+    }
+
+    flight.price = flight.prices[0];
 
     return flight;
   }
