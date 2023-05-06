@@ -27,6 +27,6 @@ export class FlightsController {
   })
   @Get('airport')
   searchCity(@Query() params: { q: string }): Airport[] {
-    return this.flightsService.searchCity(params.q || '');
+    return this.flightsService.searchCity(params.q);
   }
 }

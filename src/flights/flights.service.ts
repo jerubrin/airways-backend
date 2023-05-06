@@ -3,6 +3,7 @@ import { Flight } from './models/flight.model';
 import { SearchFlights } from './models/search.model';
 import { Airport } from './models/airport.model';
 import * as airports from '../mock/airports.json';
+import * as airportsMain from '../mock/airports-main.json';
 import { getRandomInt } from 'src/helper/get-random-int';
 import { getRandomChars } from 'src/helper/get-random-chars';
 import { Price } from './models/price.model';
@@ -116,15 +117,21 @@ export class FlightsService {
     return [takeoffDate, landingDate];
   }
 
-  searchCity(name: string): Airport[] {
+  searchCity(name?: string): Airport[] {
+    if (!name) {
+      return airportsMain;
+    }
+
     const nameToLC = name.toLowerCase();
-    return airports.filter(
-      (airport) =>
-        airport.city.toLocaleLowerCase().includes(nameToLC) ||
-        airport.country.toLocaleLowerCase().includes(nameToLC) ||
-        airport.key.toLocaleLowerCase().includes(nameToLC) ||
-        airport.name.toLocaleLowerCase().includes(nameToLC),
-    );
+    return airports
+      .filter(
+        (airport) =>
+          airport.city.toLocaleLowerCase().includes(nameToLC) ||
+          airport.country.toLocaleLowerCase().includes(nameToLC) ||
+          airport.key.toLocaleLowerCase().includes(nameToLC) ||
+          airport.name.toLocaleLowerCase().includes(nameToLC),
+      )
+      .slice(0, 10);
   }
 
   generateOtherFlights(
