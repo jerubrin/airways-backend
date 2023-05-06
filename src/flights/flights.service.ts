@@ -8,6 +8,7 @@ import { getRandomInt } from 'src/helper/get-random-int';
 import { getRandomChars } from 'src/helper/get-random-chars';
 import { Price } from './models/price.model';
 import { Flights } from './models/flights.model';
+import { Seats } from './models/seats.model';
 
 export const DAY_IN_MS = 1000 * 60 * 60 * 24;
 
@@ -70,6 +71,7 @@ export class FlightsService {
     const [takeoffDate, landingDate] = this.getDateWithTime(date, timeMins);
 
     const flight = new Flight();
+    flight.seats = new Seats();
     flight.seats.total = getRandomInt(80, 700);
     flight.seats.avaible = getRandomInt(9, flight.seats.total);
     flight.flightNumber = `${getRandomChars(2)}-${getRandomInt(10, 9999)}`;
