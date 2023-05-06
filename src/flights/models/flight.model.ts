@@ -1,7 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Airport } from './airport.model';
+import { Flights } from './flights.model';
 import { Price } from './price.model';
-import { PriceList } from './prices.model';
+// import { PriceList } from './prices.model';
 
 export class Flight {
   @ApiProperty({ type: () => Airport })
@@ -37,8 +38,8 @@ export class Flight {
   @ApiProperty({ type: () => Price })
   price: Price;
 
-  @ApiProperty({ type: () => PriceList })
-  prices: PriceList;
+  @ApiProperty({ type: () => Flights })
+  otherFlights?: Flights;
 
   @ApiProperty({
     example: 'FP-472',
