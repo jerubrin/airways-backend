@@ -70,7 +70,8 @@ export class FlightsService {
     const [takeoffDate, landingDate] = this.getDateWithTime(date, timeMins);
 
     const flight = new Flight();
-    flight.avaible = getRandomInt(6, 300);
+    flight.seats.total = getRandomInt(80, 700);
+    flight.seats.avaible = getRandomInt(9, flight.seats.total);
     flight.flightNumber = `${getRandomChars(2)}-${getRandomInt(10, 9999)}`;
     flight.timeMins = timeMins + getRandomInt(-5, 6);
     flight.form = from;

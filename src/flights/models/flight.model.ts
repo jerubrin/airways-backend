@@ -2,6 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Airport } from './airport.model';
 import { Flights } from './flights.model';
 import { Price } from './price.model';
+import { Seats } from './seats.model';
 // import { PriceList } from './prices.model';
 
 export class Flight {
@@ -29,11 +30,8 @@ export class Flight {
   })
   timeMins: number;
 
-  @ApiProperty({
-    example: 25,
-    description: 'Number of avaible seats (tickets)',
-  })
-  avaible: number;
+  @ApiProperty({ type: () => Seats })
+  seats: Seats;
 
   @ApiProperty({ type: () => Price })
   price: Price;
