@@ -73,7 +73,7 @@ export class FlightsService {
     const flight = new Flight();
     flight.seats = new Seats();
     flight.seats.total = getRandomInt(80, 700);
-    flight.seats.avaible = getRandomInt(9, flight.seats.total);
+    flight.seats.avaible = getRandomInt(1, flight.seats.total);
     flight.flightNumber = `${getRandomChars(2)}-${getRandomInt(10, 9999)}`;
     flight.timeMins = timeMins + getRandomInt(-5, 6);
     flight.form = from;

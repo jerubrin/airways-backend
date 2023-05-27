@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import databaseOptions from './database-options';
-import { ConfigModule } from '@nestjs/config';
 import { FlightsModule } from './flights/flights.module';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { FlightsModule } from './flights/flights.module';
     TypeOrmModule.forRoot(databaseOptions()),
     AuthModule,
     FlightsModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
