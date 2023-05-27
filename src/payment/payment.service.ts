@@ -41,6 +41,7 @@ export class PaymentService {
 
   async getPayments(req): Promise<Payment[]> {
     const email = req?.user?.email;
+    console.log(email);
 
     if (!email) {
       throw new HttpException('User not found', HttpStatus.NOT_FOUND);
