@@ -6,13 +6,12 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
-import { AuthService } from 'src/auth/auth.service';
-import { RegistrationRequest } from './model/registration-request.model';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { User } from './user.entity';
-import { LoginRequest } from './model/login-request';
-import { TokenRes } from './model/token-res';
+import { AuthService } from 'src/auth/auth.service';
 import { JwtAuthGuard } from 'src/guard/jwt-auth.guard';
+import { LoginRequest } from './model/login-request';
+import { RegistrationRequest } from './model/registration-request.model';
+import { TokenRes } from './model/token-res';
 import { UserRes } from './model/user-res';
 
 @ApiTags('Authorization API')
@@ -21,7 +20,7 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @ApiOperation({ summary: 'Create new user' })
-  @ApiResponse({ status: 201, type: User })
+  @ApiResponse({ status: 201, type: TokenRes })
   @Post('registration')
   create(@Body() userReq: RegistrationRequest) {
     return this.authService.createUser(userReq);

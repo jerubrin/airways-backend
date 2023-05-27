@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
+import { JwtModule } from '@nestjs/jwt';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { JwtAuthGuard } from 'src/guard/jwt-auth.guard';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user.entity';
-import { JwtModule } from '@nestjs/jwt';
-import { JwtAuthGuard } from 'src/guard/jwt-auth.guard';
 
 @Module({
   imports: [
