@@ -19,4 +19,7 @@ export class PaymentItem {
 
   @Column({ nullable: false })
   flights: string;
+
+  @Column({ nullable: true })
+  randomData?: string;
 }

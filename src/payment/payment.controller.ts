@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Post,
   Query,
@@ -17,7 +18,7 @@ import { PaymentService } from './payment.service';
 export class PaymentController {
   constructor(private paymentService: PaymentService) {}
 
-  @ApiOperation({ summary: 'Search Flights' })
+  @ApiOperation({ summary: 'Add Payment' })
   @ApiResponse({ status: 201, type: String })
   @UseGuards(JwtAuthGuard)
   @Post('pay')
@@ -25,7 +26,7 @@ export class PaymentController {
     return this.paymentService.setNewPayment(paymentList, req);
   }
 
-  @ApiOperation({ summary: 'Search Airport' })
+  @ApiOperation({ summary: 'Get all payments' })
   @ApiResponse({ status: 201, type: [Payment] })
   @UseGuards(JwtAuthGuard)
   @Get('list')
@@ -33,7 +34,7 @@ export class PaymentController {
     return await this.paymentService.getPayments(req);
   }
 
-  @ApiOperation({ summary: 'Search Flights (without authorization)' })
+  @ApiOperation({ summary: 'Add Payment (without authorization by email)' })
   @ApiResponse({ status: 201, type: String })
   @ApiQuery({
     name: 'email',
@@ -46,7 +47,7 @@ export class PaymentController {
     return this.paymentService.setNewPayment(paymentList, { user: { email } });
   }
 
-  @ApiOperation({ summary: 'Search Airport' })
+  @ApiOperation({ summary: 'Get all payments (without authorization by email)' })
   @ApiResponse({ status: 201, type: [Payment] })
   @ApiQuery({
     name: 'email',
@@ -56,5 +57,35 @@ export class PaymentController {
   @Post('oauth-list')
   async getListOauth(@Query() { email }): Promise<Payment[]> {
     return await this.paymentService.getPayments({ user: { email } });
+  }
+
+  @ApiOperation({ summary: 'Remove payment' })
+  @ApiResponse({ status: 200, type: Object })
+  @UseGuards(JwtAuthGuard)
+  @ApiQuery({
+    name: 'id',
+    description: 'Enter payment uuid',
+    example: 'xxxxxxx-xxxxxxx-xxxx',
+  })
+  @Delete('delete')
+  async removePayment(@Query() { id }, @Request() req): Promise<any> {
+    return await this.paymentService.removePayment(id, req);
+  }
+
+  @ApiOperation({ summary: 'Remove payment (without authorization by email)' })
+  @ApiResponse({ status: 201, type: [Payment] })
+  @ApiQuery({
+    name: 'email',
+    description: 'Enter email',
+    example: 'xsmilex@inbox.ru',
+  })
+  @ApiQuery({
+    name: 'id',
+    description: 'Enter payment uuid',
+    example: 'xxxxxxx-xxxxxxx-xxxx',
+  })
+  @Delete('oauth-delete')
+  async removePaymentOauth(@Query() { id, email }): Promise<any> {
+    return await this.paymentService.removePayment(id, { user: { email } });
   }
 }

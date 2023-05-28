@@ -2,6 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Flight } from 'src/flights/models/flight.model';
 import { PassengersResultData } from './passengers-result-data.model';
 import { PriceData } from './price-data.model';
+import { RandomData } from './ramdom-data';
 
 export class Payment {
   @ApiProperty({
@@ -27,4 +28,10 @@ export class Payment {
     description: 'Selected flights',
   })
   flights: Flight[];
+
+  @ApiProperty({
+    type: () => RandomData,
+    description: 'Other data',
+  })
+  randomData: RandomData;
 }
